@@ -1,0 +1,9 @@
+{
+	"env": [
+		{
+			"CURVECLIPPER": "PATH/TO/PACKAGE/CurveClipper"
+		}
+	],
+	"path": "$CURVECLIPPER"
+	
+}
