@@ -6,12 +6,13 @@ Clipper2.
 
 ## Included Python builds
 
-- `python3.11libs/pyclipr` is the original Python 3.11 package.
+- `python3.11libs/pyclipr` is the Python 3.11 Windows x64 package used by
+  Houdini 21.
 - `python3.13libs/pyclipr` is the Python 3.13 Windows x64 package used by
   Houdini 22.
 
-The verified Python 3.13 package is `pyclipr` 0.1.8, built for CPython 3.13,
-and uses Clipper 2.0.1. It supports `JoinType.Bevel` and the
+Both verified packages use `pyclipr` 0.1.8 and Clipper 2.0.1, built for their
+respective CPython ABIs. They support `JoinType.Bevel` and the
 `ClipperOffset.arcTolerance`, `miterLimit`, and `preserveCollinear` setters.
 
 Do not substitute the `pyclipr2` 0.1.9 Windows wheel. Its CPython 3.13 build
@@ -164,3 +165,25 @@ If `JoinType.Bevel` is missing, confirm that the C++ binding change was made
 before building. If a property assignment reports an incompatible
 `Clipper2Lib::ClipperOffset` argument, confirm that the installed distribution
 is `pyclipr`, not `pyclipr2`.
+
+## License
+
+CurveClipper's original project content is available under the Boost Software
+License 1.0 (`BSL-1.0`). See [LICENSE](LICENSE).
+
+The bundled native `pyclipr` extensions incorporate third-party software under
+BSL-1.0, BSD-3-Clause, MPL-2.0, and compatible licenses. Those components remain
+under their own licenses. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
+and [THIRD_PARTY_LICENSES](THIRD_PARTY_LICENSES) for attribution, complete
+license texts, and corresponding-source information.
+
+## AI Disclaimer
+
+AI-assisted tools were used during development for code investigation,
+compatibility work, documentation, and testing support. AI-generated or
+AI-suggested material was reviewed and tested by the project maintainer before
+inclusion. AI assistance does not change the ownership or licensing of this
+project or its third-party components, and it does not provide any warranty of
+correctness, fitness, security, or legal compliance. Human contributors remain
+responsible for the final contents and should independently validate the tool
+for production use.
